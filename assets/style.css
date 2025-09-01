@@ -234,13 +234,46 @@ footer{ padding:12px 22px; display:flex; justify-content:space-between; gap:10px
 .small{ font-size:12px; color:var(--muted); }
 
 /* responsive */
-@media (max-width:520px){
-  body{ padding:12px; }
-  .grid{ gap:12px; padding:12px; }
-  .card{ padding:12px; border-radius:12px; }
-  .brand span{ font-size:16px; }
-  .leaf{ width:40px; height:40px; }
+/* responsive */
+/* 📱 Smartphone only (≤520px) */
+@media (max-width: 520px) {
+  body {
+    padding: 4px;
+    font-size: 13px; /* slightly smaller base font */
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 6px;         /* less gap between items */
+    padding: 6px;
+  }
+
+  .card {
+    width: 100%;      
+    padding: 8px;     /* smaller padding inside cards */
+    border-radius: 10px;
+  }
+
+  .brand span {
+    font-size: 14px;  /* reduced text */
+  }
+
+  .leaf {
+    width: 28px;
+    height: 28px;     /* smaller icons/images */
+  }
+
+  h1, h2, h3 {
+    font-size: 1rem;  /* tighter headings */
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
+
 
 /* ensure base uses new bg/text */
 body{
@@ -394,3 +427,4 @@ input:focus, textarea:focus, select:focus {
   color: var(--muted);
   border: var(--border);
 }
+
